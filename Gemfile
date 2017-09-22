@@ -52,7 +52,7 @@ gem 'nokogiri', '~> 1.6'
 # Caching
 gem 'dalli', '~> 2.7'
 
-
+gem 'bundler-audit'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
