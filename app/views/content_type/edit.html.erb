@@ -1,0 +1,11 @@
+<div class="container">
+		 <% @forms.each do |form| %>
+		      
+		        <%= form.label %>:
+		        <% if form.element_type == "check_box_tag" %>
+		        	<%= check_box_tag form.label %>
+		        	<%= link_to "Edit", edit_content_type_path(id: form.id), method: :get %><br>
+		        <% end %>
+		      
+		 <% end %>
+</div>

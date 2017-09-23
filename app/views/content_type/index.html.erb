@@ -1,0 +1,73 @@
+
+<div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+     
+</div>
+
+
+
+		<div class = "Items">
+
+			<div class = "Item">
+				<%= form_tag( "/add_element", method: :get)  do %>
+					<%= hidden_field_tag "element_type", "check_box_tag" %>
+					<%= hidden_field_tag "label", "label" %> 
+					<%= hidden_field_tag "value_type","value_integer" %> 
+				   <%= submit_tag 'Single checkbox'%>
+				<% end %>
+			</div><br>
+			<div class = "Item"><%= link_to "Mutiple checkbox",add_element_path %>
+			</div><br>
+			<div class = "Item"><%= link_to "Date Picker", add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "File attachement",add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "Number", add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "Radio select (Select a single option)", add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "Dropdown select ",add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "Single-line text", add_element_path %><br></div><br>
+			<div class = "Item"><%= link_to "Multi-line text", add_element_path	 %><br></div><br>
+		</div>
+
+	<div class="form_content">	
+		<%= form_tag( "/add_form_type", method: :get)  do %>
+			<%= select_tag "form_type" ,options_from_collection_for_select(@content_types, "id", "contenttype") %>	
+		    <div><%= submit_tag 'Apply',class: "btn btn-primary"%></div>
+		<% end %>
+
+		<div class="container">
+		 <% @forms.each do |form| %>
+		      
+		        <%= form.label %>:
+		        <% if form.element_type == "check_box_tag" %>
+		        	<%= check_box_tag form.label %>
+		        	<button type="button"  data-toggle="modal" data-target="#myModal">Edit</button>
+
+					<!-- Modal -->
+					<div id="myModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title">Label</h4>
+					      </div>
+					      <div class="modal-body">
+					        <%= form_tag("/update_label", method: :get)  do %>
+					        	<%= hidden_field_tag "element_id", form.id %>
+								<%= text_field_tag "label" %>
+							   <%= submit_tag 'Update'%>
+							<% end %>
+					      </div>
+					    </div>
+					    <!-- Modal. End -->
+					  </div>
+					</div><br>
+		        <% end %>
+		      
+		 <% end %>
+		</div>
+	</div>
+
+
