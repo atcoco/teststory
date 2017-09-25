@@ -1,3 +1,4 @@
+
 class SuggestionItem extends React.Component {
   render () {
     return (
@@ -20,3 +21,4 @@ class SuggestionItem extends React.Component {
   }
 }
 
+// module.exports = SuggestionItem;

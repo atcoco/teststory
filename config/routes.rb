@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :recommended_posts, only: [:index]
   end
   resources :content_type do 
-    resources :form_information do
+    resources :form_informations do
     end
   end
 
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get "/add_element", to: "content_type#add_element"
   get "/create_form", to: "content_type#create_form"
   get "/save_form", to: "content_type#save_form"
-  get "/update_label", to: "form_information#update_label"
+  get "/update_element_label", to: "form_informations#update_element_label"
 
 
 

@@ -1,3 +1,4 @@
+
 class SearchContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -73,3 +74,4 @@ class SearchContainer extends React.Component {
   }
 }
 
+// module.exports = SearchContainer;

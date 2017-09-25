@@ -1,0 +1,2 @@
+class MultipleItemsController < ApplicationController
+end

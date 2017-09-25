@@ -1,3 +1,4 @@
+
 class SearchBar extends React.Component {
   constructor(props) {
     super(props)
@@ -29,3 +30,4 @@ class SearchBar extends React.Component {
   }
 }
 
+// module.exports = SearchBar;

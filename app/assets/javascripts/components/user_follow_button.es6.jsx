@@ -1,3 +1,4 @@
+
 class UserFollowButton extends React.Component {
   constructor(props) {
     super(props)
@@ -112,3 +113,4 @@ class UserFollowButton extends React.Component {
 UserFollowButton.propTypes = {
   following: React.PropTypes.bool
 };
+// module.exports = UserFollowButton;

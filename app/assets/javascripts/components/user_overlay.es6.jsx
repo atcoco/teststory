@@ -1,3 +1,4 @@
+
 class UserOverlay extends React.Component {
   constructor(props) {
     super(props);
@@ -150,3 +151,4 @@ class UserOverlay extends React.Component {
 
 }
 
+// module.exports = UserOverlay;

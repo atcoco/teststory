@@ -1,3 +1,4 @@
+
 class TagFollowButton extends React.Component {
   constructor(props) {
     super(props)
@@ -68,3 +69,4 @@ class TagFollowButton extends React.Component {
 TagFollowButton.propTypes = {
   following: React.PropTypes.bool
 };
+// module.exports = TagFollowButton;

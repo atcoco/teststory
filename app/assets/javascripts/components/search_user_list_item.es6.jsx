@@ -1,3 +1,4 @@
+
 class SearchUserListItem extends React.Component {
   render() {
     return (
@@ -11,3 +12,4 @@ class SearchUserListItem extends React.Component {
   }
 }
 
+// module.exports = SearchUserListItem;

@@ -1,3 +1,4 @@
+
 class UserFollowContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -90,3 +91,4 @@ UserFollowContainer.propTypes = { following: React.PropTypes.bool,
 UserFollowContainer.defaultProps = {
   overlayTrigger: false
 };
+// module.exports = UserFollowContainer;

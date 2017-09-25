@@ -1,3 +1,4 @@
+
 class OverlayTriggerButton extends React.Component {
   constructor(props) {
     super(props);
@@ -30,3 +31,4 @@ OverlayTriggerButton.propTypes = {
   overlayHeading: React.PropTypes.string,
   apiEndpoint: React.PropTypes.string.isRequired
 };
+// module.exports = OverlayTriggerButton;

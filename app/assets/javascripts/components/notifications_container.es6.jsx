@@ -1,3 +1,4 @@
+
 class NotificationsContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -178,3 +179,4 @@ class NotificationsContainer extends React.Component {
   }
 
 }
+// module.exports = NotificationsContainer;

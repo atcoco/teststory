@@ -1,3 +1,4 @@
+
 class PopoverLink extends React.Component {
   constructor(props) {
     super(props);
@@ -60,3 +61,4 @@ class PopoverLink extends React.Component {
   }
 }
 
+// module.exports = PopoverLink;

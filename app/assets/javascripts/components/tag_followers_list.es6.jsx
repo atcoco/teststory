@@ -1,3 +1,4 @@
+
 class TagFollowersList extends React.Component {
   constructor(props) {
     super(props);
@@ -46,3 +47,4 @@ class TagFollowersList extends React.Component {
   }
 }
 
+// module.exports = TagFollowersList;

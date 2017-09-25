@@ -1,3 +1,4 @@
+
 class UserPopover extends React.Component {
   render () {
     return (
@@ -53,3 +54,4 @@ class UserPopover extends React.Component {
   }
 }
 
+// module.exports = UserPopover;

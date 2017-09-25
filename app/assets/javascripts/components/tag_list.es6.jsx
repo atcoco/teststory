@@ -1,3 +1,4 @@
+
 class TagList extends React.Component {
   render () {
     return (
@@ -26,3 +27,4 @@ TagList.propTypes = {
   className: React.PropTypes.string
 };
 
+// module.exports = TagList;

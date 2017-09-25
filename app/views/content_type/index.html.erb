@@ -13,12 +13,21 @@
 			<div class = "Item">
 				<%= form_tag( "/add_element", method: :get)  do %>
 					<%= hidden_field_tag "element_type", "check_box_tag" %>
+					<%= hidden_field_tag "multi", 0 %> 
 					<%= hidden_field_tag "label", "label" %> 
 					<%= hidden_field_tag "value_type","value_integer" %> 
 				   <%= submit_tag 'Single checkbox'%>
 				<% end %>
 			</div><br>
-			<div class = "Item"><%= link_to "Mutiple checkbox",add_element_path %>
+			<div class = "Item">
+				<%= form_tag( "/add_element", method: :get)  do %>
+					<%= hidden_field_tag "element_type", "check_box_tag" %>
+					<%= hidden_field_tag "multi", 1 %> 
+					<%= hidden_field_tag "label", "label" %> 
+					<%= hidden_field_tag "value_type","value_string" %> 
+				   <%= submit_tag 'Multiple checkbox'%>
+				<% end %>
+			</div><br>
 			</div><br>
 			<div class = "Item"><%= link_to "Date Picker", add_element_path %><br></div><br>
 			<div class = "Item"><%= link_to "File attachement",add_element_path %><br></div><br>
@@ -37,14 +46,14 @@
 
 		<div class="container">
 		 <% @forms.each do |form| %>
-		      
-		        <%= form.label %>:
+		      	
+		        <%= form.label %>:	
 		        <% if form.element_type == "check_box_tag" %>
 		        	<%= check_box_tag form.label %>
-		        	<button type="button"  data-toggle="modal" data-target="#myModal">Edit</button>
+		        	<button type="button"  data-toggle="modal" data-target= #<%= form.id %> >Edit</button>
 
 					<!-- Modal -->
-					<div id="myModal" class="modal fade" role="dialog">
+					<div id= <%= form.id %> class="modal fade" role="dialog">
 					  <div class="modal-dialog">
 
 					    <!-- Modal content-->
@@ -54,8 +63,8 @@
 					        <h4 class="modal-title">Label</h4>
 					      </div>
 					      <div class="modal-body">
-					        <%= form_tag("/update_label", method: :get)  do %>
-					        	<%= hidden_field_tag "element_id", form.id %>
+					        <%= form_tag("/update_element_label", method: :get)  do %>
+					         	<%= hidden_field_tag "element_id", form.id %>					        	
 								<%= text_field_tag "label" %>
 							   <%= submit_tag 'Update'%>
 							<% end %>

@@ -50,6 +50,7 @@ class ContentTypeController < ApplicationController
 			@form.form_type = session[:form_type]
 			@form.value_type = params[:value_type]
 			@form.element_type = params[:element_type]
+			@form.multi = params[:multi]
 			@form.label = params[:label]
 			@form.save()	
 
@@ -63,8 +64,8 @@ class ContentTypeController < ApplicationController
     	session[:form_type_id] = @content_type.id
     	session[:form_type] = @content_type.contenttype
 
-    	@forms = @content_type.form_informations.where(form_type: session[:form_type])
-      @content_types = ContentType.all 
+    	@forms = @content_type.form_informations.where(form_type: session[:form_type]).order('created_at DESC')
+        @content_types = ContentType.all 
     end
 
     def edit

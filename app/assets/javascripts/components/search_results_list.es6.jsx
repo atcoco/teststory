@@ -1,3 +1,5 @@
+
+
 class SearchResultsList extends React.Component {
 
   render() {
@@ -57,3 +59,4 @@ class SearchResultsList extends React.Component {
   }
 }
 
+// module.exports = SearchResultsList;
