@@ -81,5 +81,7 @@ test:
 production:
   <<: *default
   database: stories_production
+  username: stories
+  password: stories
   pool: 5
 
